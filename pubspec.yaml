@@ -1,0 +1,56 @@
+name: shabahang
+description: "Music Application With Violet Vibes"
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  cupertino_icons: ^1.0.8
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  flutter_svg: ^2.2.0
+  hydrated_bloc: ^10.0.0
+  mocktail: ^1.0.4
+  path_provider: ^2.1.5
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+# The following section is specific to Flutter packages.
+flutter:
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/fonts/
+    - assets/images/
+    - assets/vectors/
+
+  fonts:
+    - family: Kalameh
+      fonts:
+        - asset: assets/fonts/Kalameh-Light.ttf
+          weight: 300
+
+        - asset: assets/fonts/Kalameh-Regular.ttf
+          weight: 400
+
+        - asset: assets/fonts/Kalameh-Medium.ttf
+          weight: 500
+
+        - asset: assets/fonts/Kalameh-Bold.ttf
+          weight: 600
+
+        - asset: assets/fonts/Kalameh-Black.ttf
+          weight: 900
