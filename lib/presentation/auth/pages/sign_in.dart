@@ -4,10 +4,10 @@ import 'package:shabahang/common/helpers/is_dark_mode.dart';
 import 'package:shabahang/common/widgets/appbar/return_arrow.dart';
 import 'package:shabahang/common/widgets/buttons/basic_app_button.dart';
 import 'package:shabahang/core/configs/assets/app_vectors.dart';
-import 'package:shabahang/presentation/auth/pages/sign_in.dart';
+import 'package:shabahang/presentation/auth/pages/sign_up.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+class SignInPage extends StatelessWidget {
+  const SignInPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class SignUpPage extends StatelessWidget {
                 children: [
               
                   Text(
-                    'ساخت حساب جدید',
+                    'ورود به حساب',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -46,10 +46,6 @@ class SignUpPage extends StatelessWidget {
                   ),
               
                   const SizedBox(height: 40,),
-              
-                  _fullNameField(context),
-
-                  const SizedBox(height: 20,),
 
                   _eMailField(context),
 
@@ -61,7 +57,7 @@ class SignUpPage extends StatelessWidget {
 
                   BasicAppButton(
                     onPressed: () {}, 
-                    title: 'حسابت رو بساز'
+                    title: 'وارد شوید'
                   ),
               
                 ],
@@ -80,13 +76,13 @@ class SignUpPage extends StatelessWidget {
 
                     TextButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => SignInPage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => SignUpPage()));
                       }, 
-                      child: Text('وارد شوید'),
+                      child: Text('یکی بسازید'),
                     ),
 
                     Text(
-                      'حساب کاربری دارید؟',
+                      'حساب کاربری ندارید؟',
                     ),
                     
                   ],
@@ -96,17 +92,6 @@ class SignUpPage extends StatelessWidget {
           ),
 
         ],
-      ),
-    );
-  }
-
-  Widget _fullNameField(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        hintTextDirection: TextDirection.rtl,
-        hintText: 'نام و نام خانوادگی',
-      ).applyDefaults(
-        Theme.of(context).inputDecorationTheme
       ),
     );
   }
